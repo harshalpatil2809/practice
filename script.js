@@ -3,7 +3,7 @@ let inputs = document.querySelectorAll("input")
 
 form.addEventListener("submit", function (dets) {
     dets.preventDefault();
-    
+
     let main = document.createElement("div");
     main.classList.add("main");
 
@@ -35,4 +35,10 @@ form.addEventListener("submit", function (dets) {
     main.appendChild(info);
 
     document.body.appendChild(main)
+
+    inputs.forEach(function(inp){
+        if ( inp.type !== "submit"){
+            inp.value = ""
+        }
+    })
 });
