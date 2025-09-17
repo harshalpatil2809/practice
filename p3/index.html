@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+        }
+        div{
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: #1E90FF;
+            box-shadow:
+                0 0 40px 18px rgba(30,144,255,0.5),
+                0 0 24px 10px rgba(30,144,255,0.12),
+                0 0 10px 2px rgba(30,144,255,0.35),
+                inset 0 -12px 30px rgba(0,0,0,0.35);
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+            background-image:
+                radial-gradient(circle at 35% 30%, rgba(255,255,255,0.45) 0%,
+                                rgba(255,255,255,0.12) 18%,
+                                rgba(255,255,255,0) 40%),
+                radial-gradient(circle at 50% 55%, rgba(0,0,0,0.15) 60%,
+                                rgba(0,0,0,0.35) 100%);
+
+            background-blend-mode: screen, multiply;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main dot"></div>
+    <script src="script.js"></script>
+</body>
+</html>
