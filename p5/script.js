@@ -9,16 +9,19 @@ form.addEventListener("submit", function(detl){
 
     emailcheck = emailRegex.test(email.value)
     passcheeck = passwordRegex.test(pass.value)
-    console.log(emailcheck)
+
     isValid = true;
-    if (emailcheck){
+    
+    if (!emailcheck){
         document.querySelector("#email-error").textContent = "Email is not valid"
         isValid = false;
+        document.querySelector("#email-error").style.display = "block"
     }
 
-    if (passcheeck){
+    if (!passcheeck){
         document.querySelector("#password-error").textContent = "Password is not valid"
         isValid = false;
+        document.querySelector("#password-error").style.display = "block"
     }
 
     if (isValid){

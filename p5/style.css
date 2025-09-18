@@ -75,9 +75,13 @@ button:hover {
   background-color: #0288d1;
 }
 
-.error {
+#password-error , #email-error {
   color: #ff5252;
   font-size: 0.85rem;
   margin-top: 0.3rem;
   display: none;
+}
+
+#final-output{
+    color: rgb(21, 179, 21);
 }
