@@ -10,7 +10,10 @@ btn.addEventListener("click", function(){
             fill.style.width = count + "%";
             count++;
         }
+        else{
+            document.querySelector(".file-title").textContent = "Downloaded"
+            document.querySelector(".file-title").style.color = "green"
+            clearTimeout(timeout);
+        }
     },3000/100)
 });
-
-clearTimeout(timeout);
