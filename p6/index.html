@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download Progress Bar</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0d1117;
+      font-family: Arial, sans-serif;
+      color: #f0f6fc;
+    }
+
+    .download-box {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 24px;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .file-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .progress-bar {
+      position: relative;
+      height: 16px;
+      width: 100%;
+      background: #21262d;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%; 
+      background: linear-gradient(90deg, #7c5cff, #00d4ff);
+      border-radius: 10px;
+    }
+
+    .progress-text {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #8b949e;
+    }
+
+    .btn-start {
+      margin-top: 16px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      background: #238636;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .btn-start:hover {
+      background: #2ea043;
+    }
+  </style>
+</head>
+<body>
+  <div class="download-box">
+    <div class="file-title">Download...</div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <div class="progress-text"><span>0%</span> downloaded</div>
+    <button class="btn-start">Start</button>
+  </div>
+
+  <script src="sript.js"></script>
+</body>
+</html>
