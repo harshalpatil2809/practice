@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Theme</title>
+    <style>
+        /* Default light theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --button-bg: #f0f0f0;
+  --button-text: #222222;
+  --button-border: #cccccc;
+}
+
+/* Dark theme */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --button-bg: #333333;
+  --button-text: #f5f5f5;
+  --button-border: #555555;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  text-align: center;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background: var(--button-border);
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>Toggle button</div>
+        <button>Toggle</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
